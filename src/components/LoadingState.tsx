@@ -18,7 +18,15 @@ export const LoadingState: React.FC<LoadingStateProps> = ({
   className = "",
 }) => {
   return (
-    <div className={`loading-container ${className}`}>
+    <div
+      className={`loading-container ${className}`}
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        gap: "10px",
+      }}
+    >
       <Loader size={size} />
       {message && <div className="loading-message">{message}</div>}
     </div>
